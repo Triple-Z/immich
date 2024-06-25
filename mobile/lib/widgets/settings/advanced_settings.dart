@@ -68,13 +68,13 @@ class AdvancedSettings extends HookConsumerWidget {
         contentPadding: const EdgeInsets.symmetric(horizontal: 20),
         dense: true,
         title: Text(
-          "Proxy Headers",
+          "advanced_settings_proxy_headers_title".tr(),
           style: context.textTheme.bodyLarge?.copyWith(
             fontWeight: FontWeight.w500,
           ),
         ),
         subtitle: const Text(
-          "Define proxy headers Immich should send with each network request",
+          "advanced_settings_proxy_headers_subtitle",
         ).tr(),
         onTap: () => openProxyHeaders(context),
       )

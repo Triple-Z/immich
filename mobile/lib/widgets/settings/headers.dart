@@ -64,7 +64,7 @@ class HeaderSettings extends HookConsumerWidget {
           preferredSize: Size.fromHeight(1),
           child: Divider(height: 1),
         ),
-        title: const Text('Proxy Headers').tr(),
+        title: const Text('advanced_settings_proxy_headers_title').tr(),
         actions: [
           IconButton(
             onPressed: () {
@@ -72,7 +72,7 @@ class HeaderSettings extends HookConsumerWidget {
               headers.value = headers.value.toList();
             },
             icon: const Icon(Icons.add_outlined),
-            tooltip: 'Add Header',
+            tooltip: 'proxy_headers_add_header_tip'.tr(),
           ),
         ],
       ),
@@ -118,7 +118,7 @@ class HeaderKeyValueSettings extends StatelessWidget {
 
   String? emptyFieldValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Value cannot be empty';
+      return 'proxy_headers_field_validator_msg'.tr();
     }
 
     return null;
@@ -138,9 +138,9 @@ class HeaderKeyValueSettings extends StatelessWidget {
                 child: TextFormField(
                   controller: keyController,
                   decoration: InputDecoration(
-                    labelText: 'Header Name'.tr(),
+                    labelText: 'proxy_headers_header_name_label'.tr(),
                     border: const OutlineInputBorder(),
-                    hintText: 'Value of the header name'.tr(),
+                    hintText: 'proxy_headers_header_name_hint'.tr(),
                   ),
                   autocorrect: false,
                   onChanged: (v) {
@@ -169,9 +169,9 @@ class HeaderKeyValueSettings extends StatelessWidget {
           child: TextFormField(
             controller: valueController,
             decoration: InputDecoration(
-              labelText: 'Header Value'.tr(),
+              labelText: 'proxy_headers_header_value_label'.tr(),
               border: const OutlineInputBorder(),
-              hintText: 'Value of the header'.tr(),
+              hintText: 'proxy_headers_header_value_hint'.tr(),
             ),
             autocorrect: false,
             onChanged: (v) {
